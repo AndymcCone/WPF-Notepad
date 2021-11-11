@@ -26,7 +26,7 @@
 
         </Menu>
         <Grid>
-            <TextBox x:Name="textBox1" AcceptsReturn="True" FontSize="12" TextWrapping="Wrap" Margin="5,5,5,5" BorderThickness="0,0,0,0"/>
+            <TextBox x:Name="textBox1" AcceptsReturn="True" FontSize="12" TextWrapping="Wrap" Margin="2,2,2,2" BorderThickness="0,0,0,0"/>
         </Grid>
 </DockPanel>
 </Window>
