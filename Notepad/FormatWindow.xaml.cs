@@ -33,8 +33,7 @@ namespace Notepad
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
-            var pattern = "^[0-9]+([.,][0-9]{1,3})?$";
-             Regex regex = new Regex(@"[^0-9]+$");
+            Regex regex = new Regex(@"[^0-9]+$");
             e.Handled = regex.IsMatch(e.Text);
         }
     }
