@@ -83,18 +83,21 @@ namespace Notepad
 
         private void format_click(object sender, RoutedEventArgs e)
         {
+            
             FormatWindow win2 = new FormatWindow();
             win2.Owner = this;
             win2.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            win2.textBoxFontti.Text = textBox1.FontSize.ToString();
+            //win2.textBoxFontti.Text = textBox1.FontSize.ToString();
             win2.ShowDialog();
             if (win2.DialogResult == true)
             {
-                var fontti = win2.textBoxFontti.Text;
+                var fontti = win2.textBlock1.Text;
+
                 if (fontti != "")
                 {
                     textBox1.FontSize = Convert.ToDouble(fontti);
                 }
+                
             }
             
         }

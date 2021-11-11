@@ -5,12 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Notepad"
         mc:Ignorable="d"
-        Title="FormatWindow" Height="250" Width="400">
-    <Grid>
-        <TextBlock HorizontalAlignment="Center" Margin="0,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="160" FontSize="16" TextAlignment="Center"><Run Language="fi-fi" Text="Aseta fontin koko"/></TextBlock>
-        <Button Content="OK" HorizontalAlignment="Left" Margin="100,159,0,0" VerticalAlignment="Top" Height="43" Width="60" Click="Button_Click" IsDefault="True"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="246,159,0,0" VerticalAlignment="Top" Height="43" Width="59" IsCancel="True"/>
-        <TextBox x:Name="textBoxFontti" HorizontalAlignment="Center" Margin="0,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="140" Height="24" FontSize="14" PreviewTextInput="NumberValidationTextBox"/>
+        Title="FormatWindow" Height="318" Width="296" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-6">
+        <ListBox 
+            Margin="50,59,50,76"
+            SelectionChanged="ListBox_SelectionChanged_1"
+            SelectionMode="Single">
+            <ListBoxItem>8</ListBoxItem>
+            <ListBoxItem>9</ListBoxItem>
+            <ListBoxItem>10</ListBoxItem>
+            <ListBoxItem>11</ListBoxItem>
+            <ListBoxItem>12</ListBoxItem>
+            <ListBoxItem>14</ListBoxItem>
+            <ListBoxItem>16</ListBoxItem>
+            <ListBoxItem>18</ListBoxItem>
+            <ListBoxItem>20</ListBoxItem>
+            <ListBoxItem>22</ListBoxItem>
+            <ListBoxItem>24</ListBoxItem>
+            <ListBoxItem>26</ListBoxItem>
+            <ListBoxItem>28</ListBoxItem>
+            <ListBoxItem>36</ListBoxItem>
+            <ListBoxItem>48</ListBoxItem>
+            <ListBoxItem>72</ListBoxItem>
+        </ListBox>
+
+        <Button Content="OK" HorizontalAlignment="Left" Margin="50,0,0,21" Width="80" Click="Button_Click" IsDefault="True" Height="40" VerticalAlignment="Bottom"/>
+        <Button Content="Cancel" Margin="0,0,50,21" IsCancel="True" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="80"/>
+        <TextBox x:Name="textBlock1" Margin="50,33,50,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" FontSize="11" TextAlignment="Left" IsReadOnly="True"/>
+        <Label Content="size" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Height="23" Width="68" AutomationProperties.Name="textBlock1"/>
 
     </Grid>
 </Window>
