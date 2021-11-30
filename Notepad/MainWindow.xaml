@@ -4,24 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Notepad"
+        xmlns:p="clr-namespace:Notepad.Properties"
         mc:Ignorable="d"
         Title="Antin Notepad" Height="450" Width="800" Background="#FFE0DCDC">
 
     <DockPanel>
         <Menu DockPanel.Dock="Top" Background="#FFE0DCDC" BorderThickness="2">
-            <MenuItem Header="_File">
-                <MenuItem Header="_Open..." Click="MenuItem_OpenClick"/>
-                <MenuItem Header="_Save..." Click="MenuItem_SaveClick"/>
-                <MenuItem Header="_Print..." Click="MenuItem_PrintClick"/>
+            <MenuItem Header="{x:Static p:Resources.File}">
+                <MenuItem Header="{x:Static p:Resources.Open}" Click="MenuItem_OpenClick"/>
+                <MenuItem Header="{x:Static p:Resources.Save}" Click="MenuItem_SaveClick"/>
+                <MenuItem Header="{x:Static p:Resources.Print}" Click="MenuItem_PrintClick"/>
                 <Separator HorizontalAlignment="Left" Height="1" Width="140"/>
-                <MenuItem Header="E_xit" Click="MenuItem_ExitClick"/>
+                <MenuItem Header="{x:Static p:Resources.Exit}" Click="MenuItem_ExitClick"/>
             </MenuItem>
-            <MenuItem Header="_Edit">
-                <MenuItem Header ="_Copy" Command="Copy"/>
-                <MenuItem Header = "_Paste" Command="Paste"/>
+            <MenuItem Header="{x:Static p:Resources.Edit}">
+                <MenuItem Header ="{x:Static p:Resources.Copy}" Command="Copy"/>
+                <MenuItem Header = "{x:Static p:Resources.Paste}" Command="Paste"/>
             </MenuItem>
             <MenuItem Header="F_ormat">
-                <MenuItem Header="_Font..." Click="format_click"/>
+                <MenuItem Header="{x:Static p:Resources.Font}" Click="format_click"/>
             </MenuItem>
 
         </Menu>

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Notepad"
+        xmlns:p="clr-namespace:Notepad.Properties"
         mc:Ignorable="d"
         Title="FormatWindow" Height="318" Width="296" ResizeMode="NoResize">
     <Grid Margin="0,0,0,-6">
@@ -29,10 +30,10 @@
             <ListBoxItem>72</ListBoxItem>
         </ListBox>
 
-        <Button Content="OK" HorizontalAlignment="Left" Margin="50,0,0,21" Width="80" Click="Button_Click" IsDefault="True" Height="40" VerticalAlignment="Bottom"/>
-        <Button Content="Cancel" Margin="0,0,50,21" IsCancel="True" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="80"/>
+        <Button Content="{x:Static p:Resources.OK}" HorizontalAlignment="Left" Margin="50,0,0,21" Width="80" Click="Button_Click" IsDefault="True" Height="40" VerticalAlignment="Bottom"/>
+        <Button Content="{x:Static p:Resources.Cancel}" Margin="0,0,50,21" IsCancel="True" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="80"/>
         <TextBox x:Name="textBlock1" Margin="50,33,50,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" FontSize="11" TextAlignment="Left" IsReadOnly="True"/>
-        <Label Content="size" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Height="23" Width="68" AutomationProperties.Name="textBlock1"/>
+        <Label Content="{x:Static p:Resources.Size}" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Height="23" Width="68" AutomationProperties.Name="textBlock1"/>
 
     </Grid>
 </Window>
