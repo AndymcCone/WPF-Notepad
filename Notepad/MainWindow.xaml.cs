@@ -19,7 +19,7 @@ namespace Notepad
         public MainWindow()
         {
             //Kieliasetus ruotsiksi testausta varten
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("sv-SE");
+            //Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("sv-SE");
             InitializeComponent();
             
         }
@@ -91,7 +91,7 @@ namespace Notepad
             FormatWindow win2 = new FormatWindow();
             win2.Owner = this;
             win2.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            //win2.textBoxFontti.Text = textBox1.FontSize.ToString();
+            
             win2.ShowDialog();
             if (win2.DialogResult == true)
             {
